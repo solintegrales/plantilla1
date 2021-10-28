@@ -7,14 +7,13 @@ import { PrincipalComponent } from './paginas/principal.component';
 
 const ruta: Routes = [
   {
-    path: 'principal', component: PrincipalComponent,
+    path: '', component: PrincipalComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'principal', redirectTo: '/principal/dashboard', pathMatch: 'full' },
+      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     ]
   },
   { path: 'login', component: LoginComponent },
-  { path: '', component: LoginComponent, },
   { path: '**', component: NoencontroComponent },
 ];
 
